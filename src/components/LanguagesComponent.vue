@@ -45,9 +45,7 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   background-color: var(--main-bg-color);
-  margin: 0 7rem;
-  padding: 3rem 0;
-  border-bottom: 1px solid var(--white);
+  padding: 3rem 7rem;
 }
 .lang-wrapper .lang {
   display: flex;

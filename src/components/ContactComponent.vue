@@ -1,28 +1,27 @@
 <template>
-  <div class="contact-wrapper">
-    <div class="left">
-      <h1>Contact</h1>
-      <p>
-        I would love to hear about your project and how I could help. Please
-        fill in the form, and I'll get back to you as s[n as possible.
-      </p>
-    </div>
-    <div class="right">
-      <form @submit.prevent="">
-        <div class="form-group">
-          <label for="name">NAME</label>
-          <input type="text" id="name" placeholder="NAME" />
-        </div>
-        <div class="form-group">
-          <label for="email">EMAIL</label>
-          <input type="email" id="email" placeholder="EMAIL" />
-        </div>
-        <div class="form-group">
-          <label for="message">MESSAGE</label>
-          <textarea id="message" placeholder="MESSAGE"></textarea>
-        </div>
-        <button type="submit">SEND MESSAGE</button>
-      </form>
+  <div class="contact">
+    <div class="contact-wrapper">
+      <div class="left">
+        <h1>Contact</h1>
+        <p>
+          I would love to hear about your project and how I could help. Please
+          fill in the form, and I'll get back to you as soon as possible.
+        </p>
+      </div>
+      <div class="right">
+        <form @submit.prevent="">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="NAME" />
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="EMAIL" />
+          </div>
+          <div class="form-group">
+            <textarea id="message" placeholder="MESSAGE"></textarea>
+          </div>
+          <button type="submit">SEND MESSAGE</button>
+        </form>
+      </div>
     </div>
   </div>
 </template>
@@ -40,18 +39,22 @@ export default {
 </script>
 
 <style lang='css' scoped>
+.contact {
+  padding: 0 7rem;
+  background-color: var(--dark-gray);
+}
 .contact-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 7rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--dark-gray);
   border-bottom: 1px solid var(--white);
+  grid-column-gap: 15rem;
+  padding: 3rem 0;
 }
 .contact-wrapper .left {
   display: flex;
   background-color: var(--dark-gray);
   flex-direction: column;
-  flex: 1 1 40rem;
   padding: 2rem 0;
 }
 .contact-wrapper .left h1 {
@@ -62,22 +65,21 @@ export default {
   font-weight: 700;
   letter-spacing: var(--xl-char-spacing);
   line-height: var(--xl-line-height);
+  padding-bottom: 2rem;
 }
 .contact-wrapper .left p {
   font-size: var(--s-font);
   font-family: var(--font-family-main);
   background-color: var(--dark-gray);
-  color: var(--white);
+  color: var(--light-gray);
   font-weight: 500;
-  letter-spacing: var(--m-char-spacing);
-  line-height: var(--m-line-height);
+  line-height: var(--s-line-height);
   padding: 1rem 0;
 }
 .contact-wrapper .right {
   display: flex;
   background-color: var(--dark-gray);
   flex-direction: column;
-  flex: 1 1 40rem;
   padding: 2rem 0;
 }
 .contact-wrapper .right form {
@@ -92,51 +94,41 @@ export default {
   flex-direction: column;
   gap: 0.5rem;
 }
-.contact-wrapper .right form .form-group label {
-  font-size: var(--s-font);
-  background-color: var(--dark-gray);
-  font-family: var(--font-family-main);
-  color: var(--white);
-  font-weight: 500;
-  letter-spacing: var(--m-char-spacing);
-  line-height: var(--m-line-height);
-}
+
 .contact-wrapper .right form .form-group input,
 .contact-wrapper .right form .form-group textarea {
   background-color: var(--dark-gray);
   border: none;
-  border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   font-size: var(--s-font);
   font-family: var(--font-family-main);
   color: var(--white);
   font-weight: 500;
   letter-spacing: var(--m-char-spacing);
   line-height: var(--m-line-height);
+  border-bottom: 1px solid var(--white);
 }
 .contact-wrapper .right form .form-group input:focus,
 .contact-wrapper .right form .form-group textarea:focus {
   outline: none;
 }
+.contact-wrapper .right form .form-group textarea {
+  resize: none;
+  height: 7rem;
+}
 
 .contact-wrapper .right form button {
-  background-color: var(--green-color);
+  background-color: var(--dark-gray);
   border: none;
-  border-radius: 0.5rem;
-  padding: 1rem;
+  display: flex;
+  border-bottom: 2px solid var(--green-color);
+  padding: 0.5rem;
+  margin: auto 0 1rem auto;
   font-size: var(--s-font);
   font-family: var(--font-family-main);
   color: var(--white);
   font-weight: 500;
   letter-spacing: var(--m-char-spacing);
   line-height: var(--m-line-height);
-  cursor: pointer;
-}
-.contact-wrapper .right form button:hover {
-  background-color: var(--dark-gray);
-}
-
-.contact-wrapper .right form button:focus {
-  outline: none;
 }
 </style>

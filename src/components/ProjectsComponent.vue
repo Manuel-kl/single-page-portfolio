@@ -96,9 +96,7 @@ export default {
   display: flex;
   flex-direction: column;
   background-color: var(--main-bg-color);
-  margin: 0 7rem;
-  padding: 3rem 0;
-  border-bottom: 1px solid var(--white);
+  padding: 3rem 7rem;
 }
 .projects-wrapper .header {
   display: flex;
@@ -134,7 +132,7 @@ export default {
 }
 .projects-wrapper .projects .project {
   display: flex;
-  padding: 1rem 0;
+  padding: 1rem 0 5rem 0;
   flex-direction: column;
   flex: 1 1 30rem;
 }

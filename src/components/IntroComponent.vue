@@ -61,9 +61,8 @@ export default {
   display: flex;
   flex-direction: column;
   background-color: var(--main-bg-color);
-  margin: 0 7rem;
+  padding: 0 7rem;
   height: 100vh;
-  border-bottom: 1px solid var(--white);
 }
 .intro-wrapper header {
   display: flex;
@@ -102,6 +101,7 @@ export default {
   flex-direction: column;
   gap: 1.5rem;
   padding: 5rem 0;
+  border-bottom: 1px solid var(--white);
 }
 .intro-wrapper .intro h1 {
   font-size: var(--xl-font);
