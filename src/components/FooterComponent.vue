@@ -48,7 +48,8 @@ export default {
 <style lang='css' scoped>
 .footer {
   background-color: var(--dark-gray);
-  padding: 0 7rem;
+  padding: 0 var(--padding-x);
+  width: auto;
 }
 .footer footer {
   display: flex;
@@ -56,6 +57,9 @@ export default {
   align-items: center;
   background-color: var(--dark-gray);
   padding: 2rem 0;
+}
+.footer footer .name {
+  background-color: var(--dark-gray);
 }
 .footer footer .name a {
   font-size: var(--m-font);

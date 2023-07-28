@@ -40,8 +40,9 @@ export default {
 
 <style lang='css' scoped>
 .contact {
-  padding: 0 7rem;
+  padding: 0 var(--padding-x);
   background-color: var(--dark-gray);
+  width: auto;
 }
 .contact-wrapper {
   display: grid;

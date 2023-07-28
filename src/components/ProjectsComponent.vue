@@ -10,6 +10,10 @@
           src="../assets/images/thumbnail-project-1-large.webp"
           alt="project-1-thumbnail"
         />
+        <div class="project-liniks">
+          <a href="#">VIEW PROJECT </a>
+          <a href="#">VIEW CODE</a>
+        </div>
         <h3>DESIGN PORTFOLIO</h3>
         <div class="langs">
           <p>HTML</p>
@@ -21,6 +25,10 @@
           src="../assets/images/thumbnail-project-2-large.webp"
           alt="project-2-thumbnail"
         />
+        <div class="project-liniks">
+          <a href="#">VIEW PROJECT </a>
+          <a href="#">VIEW CODE</a>
+        </div>
         <h3>E-LEARNING LANDING PAGE</h3>
         <div class="langs">
           <p>HTML</p>
@@ -32,6 +40,10 @@
           src="../assets/images/thumbnail-project-3-large.webp"
           alt="project-3-thumbnail"
         />
+        <div class="project-liniks">
+          <a href="#">VIEW PROJECT </a>
+          <a href="#">VIEW CODE</a>
+        </div>
         <h3>TODO WEB APP</h3>
         <div class="langs">
           <p>HTML</p>
@@ -44,6 +56,10 @@
           src="../assets/images/thumbnail-project-4-large.webp"
           alt="project-4-thumbnail"
         />
+        <div class="project-liniks">
+          <a href="#">VIEW PROJECT </a>
+          <a href="#">VIEW CODE</a>
+        </div>
         <h3>ENTERTAINMENT WEB APP</h3>
         <div class="langs">
           <p>HTML</p>
@@ -56,6 +72,10 @@
           src="../assets/images/thumbnail-project-5-large.webp"
           alt="project-5-thumbnail"
         />
+        <div class="project-links">
+          <a href="#">VIEW PROJECT </a>
+          <a href="#">VIEW CODE</a>
+        </div>
         <h3>MEMORY GAME</h3>
         <div class="langs">
           <p>HTML</p>
@@ -68,6 +88,10 @@
           src="../assets/images/thumbnail-project-6-large.webp"
           alt="project-6-thumbnail"
         />
+        <div class="project-liniks">
+          <a href="#">VIEW PROJECT </a>
+          <a href="#">VIEW CODE</a>
+        </div>
         <h3>ART GALLERY SHOWCASE</h3>
         <div class="langs">
           <p>HTML</p>
@@ -96,7 +120,8 @@ export default {
   display: flex;
   flex-direction: column;
   background-color: var(--main-bg-color);
-  padding: 3rem 7rem;
+  padding: 3rem var(--padding-x);
+  width: auto;
 }
 .projects-wrapper .header {
   display: flex;
@@ -134,11 +159,34 @@ export default {
   display: flex;
   padding: 1rem 0 5rem 0;
   flex-direction: column;
+  width: fit-content;
   flex: 1 1 30rem;
 }
 .projects-wrapper .projects .project img {
   width: 100%;
   object-fit: cover;
+}
+.projects-wrapper .projects .project .project-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  padding: 1rem 0;
+  gap: 2rem;
+  background: none;
+}
+.projects-wrapper .projects .project .project-links a {
+  font-size: var(--s-font);
+  font-family: var(--font-family-main);
+  color: var(--white);
+  letter-spacing: var(--s-char-spacing);
+  line-height: var(--s-line-height);
+  padding: 0.5rem 0;
+  background: none;
+  margin: auto;
+  flex: 1;
+  text-decoration: none;
+  border-bottom: 2px solid var(--green-color);
 }
 .projects-wrapper .projects .project h3 {
   font-size: var(--m-font);

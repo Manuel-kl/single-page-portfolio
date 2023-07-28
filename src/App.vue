@@ -40,5 +40,7 @@ export default {
   --m-line-height: 32px;
   --s-font: 18px;
   --s-line-height: 28px;
+  /*  */
+  --padding-x: 6rem;
 }
 </style>

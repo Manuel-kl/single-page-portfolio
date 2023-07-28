@@ -2,7 +2,7 @@
   <div class="intro-wrapper">
     <header>
       <div class="name">
-        <a href="#" target="_blank">adamkeyes</a>
+        <a href="#" target="_blank">Wabuko</a>
       </div>
       <div class="social-links">
         <a href="#">
@@ -32,15 +32,18 @@
     </header>
 
     <div class="intro">
-      <h1>
-        Nice to meet you! <br />
-        I'm Adam Keyes.
-      </h1>
-      <p>
-        Based in the UK, I'm a front-end developer passionate about building
-        accessible web apps that users love.
-      </p>
-      <h2>CONTACT ME</h2>
+      <div class="greetings">
+        <h1>
+          Nice to meet you! <br />
+          I'm <span><a href="#"> Wabuko Aggrey</a>. </span>
+        </h1>
+        <p>
+          Based in the UK, I'm a front-end developer passionate about building
+          accessible web apps that users love.
+        </p>
+      </div>
+      <div class="contact"><h2>CONTACT ME</h2></div>
+      <img src="../assets/images/profile-pic.jpg" alt="" class="img-desktop" />
     </div>
   </div>
 </template>
@@ -60,9 +63,10 @@ export default {
 .intro-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: var(--main-bg-color);
-  padding: 0 7rem;
-  height: 100vh;
+  margin: 0 var(--padding-x);
+  height: 720px;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--white);
 }
 .intro-wrapper header {
   display: flex;
@@ -81,8 +85,10 @@ export default {
 }
 .intro-wrapper header .social-links {
   display: flex;
+  z-index: 2;
   flex-direction: row;
   gap: 2rem;
+  background: none;
 }
 .intro-wrapper header .social-links a,
 .intro-wrapper header .social-links .front-end-mentor svg path {
@@ -90,7 +96,12 @@ export default {
   text-decoration: none;
   font-size: var(--m-font);
   font-family: var(--font-family-main);
+  background: none;
 }
+.intro-wrapper header .social-links svg {
+  background: none;
+}
+
 .intro-wrapper header .social-links a:hover,
 .intro-wrapper header .social-links .front-end-mentor:hover svg path {
   color: var(--green-color);
@@ -99,17 +110,32 @@ export default {
 .intro-wrapper .intro {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+}
+.intro-wrapper .intro .greetings {
+  display: flex;
+  flex-direction: column;
   padding: 5rem 0;
-  border-bottom: 1px solid var(--white);
+  height: 303px;
+  justify-content: space-between;
 }
 .intro-wrapper .intro h1 {
   font-size: var(--xl-font);
   font-family: var(--font-family-main);
+  z-index: 2;
+  background: none;
   color: var(--white);
   font-weight: 700;
+  width: fit-content;
   letter-spacing: var(--xl-char-spacing);
   line-height: var(--xl-line-height);
+}
+.intro-wrapper .intro h1 span {
+  background: none;
+}
+.intro-wrapper .intro h1 span a {
+  background: none;
+  color: var(--white);
+  text-decoration: underline var(--green-color);
 }
 .intro-wrapper .intro p {
   font-size: var(--s-font);
@@ -119,7 +145,12 @@ export default {
   line-height: var(--s-line-height);
   max-width: 500px;
 }
+
+.intro-wrapper .intro .contact {
+  padding-bottom: 100px;
+}
 .intro-wrapper .intro h2 {
+  position: relative;
   font-size: var(--s-font);
   font-family: var(--font-family-main);
   color: var(--white);
@@ -128,5 +159,16 @@ export default {
   border-bottom: 0.2rem solid var(--green-color);
   width: fit-content;
   padding-bottom: 0.5rem;
+}
+.intro-wrapper .intro h2:hover {
+  color: var(--green-color);
+}
+.intro-wrapper .intro .img-desktop {
+  position: absolute;
+  right: 6rem;
+  z-index: 1;
+  top: 0;
+  width: 445px;
+  height: 720px;
 }
 </style>
