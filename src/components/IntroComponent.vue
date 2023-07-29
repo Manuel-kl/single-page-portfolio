@@ -2,7 +2,7 @@
   <div class="intro-wrapper">
     <header>
       <div class="name">
-        <a href="#" target="_blank">Wabuko</a>
+        <p>Wabuko</p>
       </div>
       <div class="social-links">
         <a href="#">
@@ -33,6 +33,7 @@
 
     <div class="intro">
       <div class="greetings">
+        <img src="../assets/images/profile-pic.jpg" alt="" class="img" />
         <h1>
           Nice to meet you! <br />
           I'm <span><a href="#"> Wabuko Aggrey</a>. </span>
@@ -43,7 +44,6 @@
         </p>
       </div>
       <div class="contact"><h2>CONTACT ME</h2></div>
-      <img src="../assets/images/profile-pic.jpg" alt="" class="img-desktop" />
     </div>
   </div>
 </template>
@@ -64,7 +64,7 @@ export default {
   display: flex;
   flex-direction: column;
   margin: 0 var(--padding-x);
-  height: 720px;
+  min-height: 720px;
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--white);
 }
@@ -74,7 +74,11 @@ export default {
   align-items: center;
   padding: 2rem 0;
 }
-.intro-wrapper header .name a {
+.intro-wrapper header .name {
+  background: none;
+  z-index: 2;
+}
+.intro-wrapper header .name p {
   font-size: var(--m-font);
   font-family: var(--font-family-main);
   color: var(--white);
@@ -82,6 +86,8 @@ export default {
   letter-spacing: var(--m-char-spacing);
   line-height: var(--m-line-height);
   text-decoration: none;
+  z-index: 2;
+  background: none;
 }
 .intro-wrapper header .social-links {
   display: flex;
@@ -115,7 +121,8 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 5rem 0;
-  height: 303px;
+  min-height: 303px;
+  gap: 2rem;
   justify-content: space-between;
 }
 .intro-wrapper .intro h1 {
@@ -131,9 +138,11 @@ export default {
 }
 .intro-wrapper .intro h1 span {
   background: none;
+  z-index: 2;
 }
 .intro-wrapper .intro h1 span a {
   background: none;
+  z-index: 2;
   color: var(--white);
   text-decoration: underline var(--green-color);
 }
@@ -141,7 +150,9 @@ export default {
   font-size: var(--s-font);
   font-family: var(--font-family-main);
   color: var(--light-gray);
+  z-index: 2;
   font-weight: 400;
+  background: none;
   line-height: var(--s-line-height);
   max-width: 500px;
 }
@@ -163,12 +174,76 @@ export default {
 .intro-wrapper .intro h2:hover {
   color: var(--green-color);
 }
-.intro-wrapper .intro .img-desktop {
+.intro-wrapper .intro .img {
   position: absolute;
-  right: 6rem;
+  right: 3rem;
   z-index: 1;
   top: 0;
   width: 445px;
   height: 720px;
+}
+@media screen and (max-width: 900px) {
+  .intro-wrapper .intro h1 {
+    font-size: 77px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .intro-wrapper header .intro {
+    max-width: 445px;
+  }
+
+  .intro-wrapper .intro .img {
+    width: 322px;
+    height: 600px;
+    object-fit: cover;
+  }
+  .intro-wrapper .intro h1 {
+    font-size: 65px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .intro-wrapper {
+    margin: 1rem;
+  }
+  .intro-wrapper header {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .intro-wrapper .intro {
+    display: flex;
+    flex-direction: column;
+  }
+  .intro-wrapper .intro .greetings {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 0;
+    min-height: 303px;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .intro-wrapper .intro .img {
+    width: 175px;
+    position: inherit;
+    height: 383px;
+    object-fit: cover;
+  }
+  .intro-wrapper .intro .greetings h1 {
+    font-size: 40px;
+    line-height: var(--l-line-height);
+    letter-spacing: -1.14px;
+    text-align: center;
+  }
+  .intro-wrapper .intro p {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 2rem 0;
+  }
+  .intro-wrapper .intro h2 {
+    font-size: 18px;
+  }
 }
 </style>

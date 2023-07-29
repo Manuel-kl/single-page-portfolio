@@ -51,7 +51,7 @@ export default {
 .lang-wrapper .lang {
   display: flex;
   flex-direction: column;
-  flex: 1 1 20rem;
+  flex-basis: 45%;
   padding: 1rem;
 }
 .lang-wrapper .lang h3 {
@@ -69,5 +69,19 @@ export default {
   color: var(--light-gray);
   font-weight: 500;
   line-height: var(--m-line-height);
+}
+@media (max-width: 768px) {
+  .lang-wrapper .lang h3 {
+    font-size: 35px;
+  }
+  .lang-wrapper .lang {
+    flex-basis: 40%;
+  }
+}
+@media (max-width: 450px) {
+  .lang-wrapper .lang {
+    flex-basis: 100%;
+    align-items: center;
+  }
 }
 </style>

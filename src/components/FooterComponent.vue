@@ -2,7 +2,7 @@
   <div class="footer">
     <footer>
       <div class="name">
-        <a href="#" target="_blank">adamkeyes</a>
+        <a href="#" target="_blank">Wabuko</a>
       </div>
       <div class="social-links">
         <a href="#">
@@ -95,5 +95,11 @@ export default {
 .footer footer .social-links .front-end-mentor:hover svg path {
   color: var(--green-color);
   fill: var(--green-color);
+}
+@media screen and (max-width: 450px) {
+  .footer footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 </style>

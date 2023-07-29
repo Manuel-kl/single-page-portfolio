@@ -1,6 +1,7 @@
 <template>
-  <div></div>
-  <router-view />
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 <script>
 export default {
@@ -29,6 +30,7 @@ export default {
   --dark-gray: #242424;
   --light-gray: #d9d9d9;
   --white: #ffffff;
+  --error-color: #f46262;
   --xl-font: 88px;
   --font-family-main: "Space Grotesk", sans-serif;
   --xl-char-spacing: -2.5px;
@@ -40,7 +42,15 @@ export default {
   --m-line-height: 32px;
   --s-font: 18px;
   --s-line-height: 28px;
+  --xs-font: 16px;
+  --xs-line-height: 24px;
+  --xs-char-spacing: 0.5px;
   /*  */
-  --padding-x: 6rem;
+  --padding-x: 3rem;
+}
+#app {
+  background-image: url(./assets/images/pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-position: 84vw 67.5vw;
 }
 </style>

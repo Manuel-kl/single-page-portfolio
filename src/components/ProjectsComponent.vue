@@ -6,13 +6,19 @@
     </div>
     <div class="projects">
       <div class="project">
-        <img
-          src="../assets/images/thumbnail-project-1-large.webp"
-          alt="project-1-thumbnail"
-        />
-        <div class="project-liniks">
-          <a href="#">VIEW PROJECT </a>
-          <a href="#">VIEW CODE</a>
+        <div class="view">
+          <img
+            src="../assets/images/countries.jpeg"
+            alt="project-1-thumbnail"
+          />
+          <div class="project-links">
+            <a href="https://wabuko01.github.io/project_0001/" target="_blank"
+              >VIEW PROJECT
+            </a>
+            <a href="https://github.com/Wabuko01/project_0001" target="_blank"
+              >VIEW CODE</a
+            >
+          </div>
         </div>
         <h3>DESIGN PORTFOLIO</h3>
         <div class="langs">
@@ -21,13 +27,15 @@
         </div>
       </div>
       <div class="project">
-        <img
-          src="../assets/images/thumbnail-project-2-large.webp"
-          alt="project-2-thumbnail"
-        />
-        <div class="project-liniks">
-          <a href="#">VIEW PROJECT </a>
-          <a href="#">VIEW CODE</a>
+        <div class="view">
+          <img
+            src="../assets/images/thumbnail-project-2-large.webp"
+            alt="project-2-thumbnail"
+          />
+          <div class="project-links">
+            <a href="#">VIEW PROJECT </a>
+            <a href="#">VIEW CODE</a>
+          </div>
         </div>
         <h3>E-LEARNING LANDING PAGE</h3>
         <div class="langs">
@@ -36,13 +44,15 @@
         </div>
       </div>
       <div class="project">
-        <img
-          src="../assets/images/thumbnail-project-3-large.webp"
-          alt="project-3-thumbnail"
-        />
-        <div class="project-liniks">
-          <a href="#">VIEW PROJECT </a>
-          <a href="#">VIEW CODE</a>
+        <div class="view">
+          <img
+            src="../assets/images/thumbnail-project-3-large.webp"
+            alt="project-3-thumbnail"
+          />
+          <div class="project-links">
+            <a href="#">VIEW PROJECT </a>
+            <a href="#">VIEW CODE</a>
+          </div>
         </div>
         <h3>TODO WEB APP</h3>
         <div class="langs">
@@ -52,13 +62,15 @@
         </div>
       </div>
       <div class="project">
-        <img
-          src="../assets/images/thumbnail-project-4-large.webp"
-          alt="project-4-thumbnail"
-        />
-        <div class="project-liniks">
-          <a href="#">VIEW PROJECT </a>
-          <a href="#">VIEW CODE</a>
+        <div class="view">
+          <img
+            src="../assets/images/thumbnail-project-4-large.webp"
+            alt="project-4-thumbnail"
+          />
+          <div class="project-links">
+            <a href="#">VIEW PROJECT </a>
+            <a href="#">VIEW CODE</a>
+          </div>
         </div>
         <h3>ENTERTAINMENT WEB APP</h3>
         <div class="langs">
@@ -68,13 +80,15 @@
         </div>
       </div>
       <div class="project">
-        <img
-          src="../assets/images/thumbnail-project-5-large.webp"
-          alt="project-5-thumbnail"
-        />
-        <div class="project-links">
-          <a href="#">VIEW PROJECT </a>
-          <a href="#">VIEW CODE</a>
+        <div class="view">
+          <img
+            src="../assets/images/thumbnail-project-5-large.webp"
+            alt="project-5-thumbnail"
+          />
+          <div class="project-links">
+            <a href="#">VIEW PROJECT </a>
+            <a href="#">VIEW CODE</a>
+          </div>
         </div>
         <h3>MEMORY GAME</h3>
         <div class="langs">
@@ -84,13 +98,15 @@
         </div>
       </div>
       <div class="project">
-        <img
-          src="../assets/images/thumbnail-project-6-large.webp"
-          alt="project-6-thumbnail"
-        />
-        <div class="project-liniks">
-          <a href="#">VIEW PROJECT </a>
-          <a href="#">VIEW CODE</a>
+        <div class="view">
+          <img
+            src="../assets/images/thumbnail-project-6-large.webp"
+            alt="project-6-thumbnail"
+          />
+          <div class="project-links">
+            <a href="#">VIEW PROJECT </a>
+            <a href="#">VIEW CODE</a>
+          </div>
         </div>
         <h3>ART GALLERY SHOWCASE</h3>
         <div class="langs">
@@ -157,10 +173,11 @@ export default {
 }
 .projects-wrapper .projects .project {
   display: flex;
-  padding: 1rem 0 5rem 0;
+  padding: 1rem 0;
   flex-direction: column;
   width: fit-content;
-  flex: 1 1 30rem;
+  flex-basis: 45%;
+  position: relative;
 }
 .projects-wrapper .projects .project img {
   width: 100%;
@@ -169,13 +186,18 @@ export default {
 .projects-wrapper .projects .project .project-links {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   position: absolute;
   padding: 1rem 0;
   gap: 2rem;
   background: none;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 33;
 }
 .projects-wrapper .projects .project .project-links a {
+  display: none;
   font-size: var(--s-font);
   font-family: var(--font-family-main);
   color: var(--white);
@@ -187,6 +209,15 @@ export default {
   flex: 1;
   text-decoration: none;
   border-bottom: 2px solid var(--green-color);
+}
+.projects-wrapper .projects .project .project-links a:hover {
+  color: var(--green-color);
+}
+.projects-wrapper .projects .project .view:hover img {
+  opacity: 0.2;
+}
+.projects-wrapper .projects .project .view:hover .project-links a {
+  display: block;
 }
 .projects-wrapper .projects .project h3 {
   font-size: var(--m-font);
@@ -209,5 +240,26 @@ export default {
   font-weight: 500;
   letter-spacing: var(--s-char-spacing);
   line-height: var(--s-line-height);
+}
+@media screen and (max-width: 768px) {
+  .projects-wrapper .projects .project {
+    flex-basis: 100%;
+  }
+  .projects-wrapper .header h1 {
+    font-size: var(--l-font);
+  }
+}
+@media screen and (max-width: 450px) {
+  .projects-wrapper {
+    padding: 0 1rem;
+  }
+  .projects-wrapper .header h1 {
+    font-size: 40px;
+    letter-spacing: -1.14px;
+  }
+  .projects-wrapper .header h3 {
+    font-size: 16px;
+    letter-spacing: -0.46px;
+  }
 }
 </style>
